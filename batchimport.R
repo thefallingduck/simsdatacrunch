@@ -21,6 +21,7 @@ quickcompile<-function(directory){
   for(i in 1:length(filenames))
   {
     
+    #This part will nead some 'read lines' work probably?
     x<-read.table(filenames[i],sep=',',header=TRUE)  #read in .csv dataset
     y<-rep(factor.table[i,],times=nrow(x)) #create factor table for .csv dataset
     z<-cbind(x,y)
